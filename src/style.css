@@ -1,0 +1,35 @@
+body{margin: 0; padding: 0; width: 100%; display: block; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px;}
+header{height: 35px; padding: 20px; display: flex; align-items: center; justify-content: space-between;}
+header .nav{list-style-type: none; margin: 0; padding: 0; display: flex; align-items: center;}
+header .nav.navbar li{display: inline;}
+header .nav.navbar li a{color: rgb(51, 50, 50); text-align: center; padding: 10px 10px; text-decoration: none;}
+.left-sidevar{width: 20%; padding: 10px 10px;}
+.left-sidevar .user-profile{height: 350px; padding: 10px; border: 1px solid rgb(136, 136, 136); display: block;}
+.content{width: 55%; padding: 10px 10px;}
+.right-sidevar{width: 25%; padding: 10px 10px;}
+
+.text-center{text-align: center;}
+.text-justify{text-align: justify;}
+
+.avatar img{width: 150px; height: 150px; border-radius: 75px;}
+
+.post-wall, .news-feed{display: block; padding-top: 10px;}
+textarea, input{width: inherit; display: block; padding: 8px;}
+button{cursor: pointer;}
+
+.pull-right{float: right;}
+.pull-left{float: left;}
+
+.news-feed{margin-top: 5em;}
+.news-feed-items{display: block; padding: 8px; border: 1px solid rgb(150, 147, 147);}
+
+.news-feed-avatar{width: 40px; border-radius: 25px; margin-right: 7px;}
+.news-feed-text{margin: 0; margin-bottom: 10px;}
+.news-feed-likes{text-align: right; margin-bottom: 2px; border-top: 1px solid #e6e6e6;}
+
+.login-wrapper{display: flex; justify-content: space-between; align-items: center; padding: 16px;}
+.login-form .list-group{list-style-type: none; margin: 0; padding: 0; display: flex; align-items: center;}
+.login-form .list-group li{margin-right: 2rem;}
+
+.register{display: flex; justify-content: flex-end; padding: 30px;}
+.register-form{width: 40%; display: block;}
