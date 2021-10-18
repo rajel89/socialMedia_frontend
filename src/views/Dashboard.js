@@ -89,14 +89,14 @@ const Dashboard = () => {
 
     const getNewsFeed = () => {
         let user = JSON.parse(session);
-
-        axios.get(environment.API_URL + 'users/news/feed', {headers: {token: user.token}})
-        .then(response => {
-            // console.log(response.data)
-            setNewsFeed(response.data)
-        }).catch(err => {
-            console.log(err.response.data)
-        })
+        if(user)
+            axios.get(environment.API_URL + 'users/news/feed', {headers: {token: user.token}})
+            .then(response => {
+                // console.log(response.data)
+                setNewsFeed(response.data)
+            }).catch(err => {
+                console.log(err.response.data)
+            });
     }
 
     return (
@@ -109,7 +109,7 @@ const Dashboard = () => {
                             <div className="avatar text-center">
                                 <img src="../assets/img/avatar.png" alt="Avatar" />
                             </div>
-                            <h4 className="text-center">{(activeUser.firstName +" "+ activeUser.lastName).toUpperCase()}</h4>
+                            <h4 className="text-center">{(activeUser?.firstName +" "+ activeUser?.lastName).toUpperCase()}</h4>
                             <p className="text-justify">
                                 {activeUser?.aboutMe}
                             </p>

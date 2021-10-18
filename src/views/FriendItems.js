@@ -9,21 +9,21 @@ const FriendItems = () => {
 
     useEffect(() => {
         let user = JSON.parse(session);
+        if(user)
+            axios.get(environment.API_URL + 'users/friends/lists', {headers: {token: user.token}})
+            .then(response => {
+                // console.log(response.data.friends)
+                if(response.status == 200)
+                {
+                    setFriendLists(response.data.friends)
+                }
 
-        axios.get(environment.API_URL + 'users/friends/lists', {headers: {token: user.token}})
-        .then(response => {
-            // console.log(response.data.friends)
-            if(response.status == 200)
-            {
-                setFriendLists(response.data.friends)
-            }
-
-            if(response.status == 204)
-            {
-                setMessage('You have no current friends.')
-            }
-        }).catch(err => {
-            console.log(err.response.data)
+                if(response.status == 204)
+                {
+                    setMessage('You have no current friends.')
+                }
+            }).catch(err => {
+                console.log(err.response.data)
         });
     }, [])
 
