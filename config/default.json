@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://new-user-01:YSx371pVxKIbHNnb@cluster0.2jmzi.mongodb.net/Social_Media_App?retryWrites=true&w=majority",
+    "jwtSecret": "JWT SECRET HERE"
+}
